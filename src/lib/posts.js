@@ -83,17 +83,6 @@ export async function getPostBySlug(slug) {
       post.canonical = seo.canonical;
     }
 
-    post.og = {
-      author: seo.opengraphAuthor,
-      description: seo.opengraphDescription,
-      image: seo.opengraphImage,
-      modifiedTime: seo.opengraphModifiedTime,
-      publishedTime: seo.opengraphPublishedTime,
-      publisher: seo.opengraphPublisher,
-      title: seo.opengraphTitle,
-      type: seo.opengraphType,
-    };
-
     post.article = {
       author: post.og.author,
       modifiedTime: post.og.modifiedTime,
